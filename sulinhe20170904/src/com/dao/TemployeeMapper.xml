@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespance:sql隔离 -->
+<mapper namespace="com.dao.TemployeeMapper">
+       <select id="selectall" resultType="temployee">
+          select * from temployee
+       </select>
+       <insert id="insert" parameterType="temployee">
+        insert into temployee(ename,eusername,epassword,esex,ephone) values(#{ename},#{eusername},#{epassword},#{esex},#{ephone})      
+       </insert>
+       
+</mapper>
